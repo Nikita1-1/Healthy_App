@@ -1,13 +1,13 @@
 import mediapipe as mp
 import numpy as np
+import math
 import cv2
 
-from pose_app import PoseDetector
-from exctracting_keypoints import Draw_Profile_View
 
-class CreatePose_Front(PoseDetector, Draw_Profile_View):
+
+class CreatePose_Front():
     def __init__(self):
-        super().__init__()
+       pass
 
     def calculate_angle(self, a, b, c):
         a = np.array(a)
@@ -76,3 +76,60 @@ class CreatePose_Front(PoseDetector, Draw_Profile_View):
                 return "Neck point is more to the left side."
             else:
                 return "Neck point and hip point are aligned horizontally."
+
+    def leg_alignment_status(self, midpoint_hip_x, left_knee, right_knee, threshold=0.003):
+        # Calculate distances
+        distance_to_left_knee = math.sqrt(
+            (midpoint_hip_x[0] - left_knee[0]) ** 2 + (midpoint_hip_x[1] - left_knee[1]) ** 2)
+        distance_to_right_knee = math.sqrt(
+            (midpoint_hip_x[0] - right_knee[0]) ** 2 + (midpoint_hip_x[1] - right_knee[1]) ** 2)
+
+        # Calculate the difference in distances
+        distance_diff = abs(distance_to_left_knee - distance_to_right_knee)
+
+        # Calculate the deviation from normal alignment
+        deviation = distance_to_left_knee - distance_to_right_knee
+
+        # Compare with threshold to determine alignment status
+        if distance_diff > threshold:
+            if deviation > 0:
+                return f"Left leg is not aligned, Deviation from normal: {abs(deviation)}"
+            else:
+                return f"Right leg is not aligned, Deviation from normal: {abs(deviation)}"
+        else:
+            return "Both legs are aligned properly."
+
+
+class CreatePose_Profile():
+    def __int__(self):
+        pass
+
+    def shoulder_alignment_profile(self, left_shoulder, right_shoulder, threshold=0.1):
+        # Calculate the difference in x-coordinates between left and right shoulders
+        shoulder_diff_x = left_shoulder[0] - right_shoulder[0]
+
+        # Check for forward inclination
+        if shoulder_diff_x > threshold:
+            forward_amount = shoulder_diff_x - threshold
+            return f"Left shoulder is moved forward by {forward_amount:.2f} units."
+
+        # Check for backward inclination
+        elif shoulder_diff_x < -threshold:
+            backward_amount = abs(shoulder_diff_x) - threshold
+            return f"Right shoulder is moved forward by {backward_amount:.2f} units."
+
+        else:
+            return "Shoulders alignment is fine."
+
+
+    def foot_index_alignment(self, left_foot_index, right_foot_index, threshold = 0.008):
+        foot_index_different_x = left_foot_index[0] - right_foot_index[0]
+
+        if foot_index_different_x > threshold:
+            forward_amount = foot_index_different_x - threshold
+            return f"Left foot is moved forward by {forward_amount:.2f} units."
+
+            # Check for backward inclination
+        elif foot_index_different_x < -threshold:
+            backward_amount = abs(foot_index_different_x) - threshold
+            return f"Right foot is moved forward by {backward_amount:.2f} units."

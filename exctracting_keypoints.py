@@ -159,8 +159,12 @@ class Draw_Profile_View:
                 cv2.circle(image, (int(point_between_mid_and_hip_x), int(point_between_mid_and_hip_y)), 2, circle_color, 5)
                 cv2.circle(image, (int(neck_point_x - 30), int(neck_point_y + 30)), 8, circle_color, 2)
 
+                landmarks_dict = {"shoulder": shoulder, "shoulder_r":shoulder_r, "left_elbow":elbow, "right_elbow":elbow_r, "left_hip": left_hip, "right_hip":right_hip, "neck_point_x":neck_point_x, "neck_point_y":neck_point_y, "midpoint_hip_x":midpoint_hip_x, "midpoint_hip_y":midpoint_hip_y,
+                                  "left_knee":left_knee, "right_knee":right_knee, "left_foot_index":left_foot_index, "right_foot_index":right_foot_index}
+
                 create_pose_front = ProcessLandmarks()
-                create_pose_front.process(landmarks)
+                create_pose_front.process_for_front_view(landmarks_dict)
+                create_pose_front.process_for_profile_view(landmarks_dict)
                 return landmarks
 
         return None
