@@ -1,9 +1,35 @@
-<mxfile host="app.diagrams.net" modified="2024-03-04T04:25:26.736Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" version="24.0.1" etag="yc3bBnpOEgL7NDs9JHK9" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-06T22:19:59.913Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="A3zY5TcY9w0YNid1rc-Y" version="24.0.1" type="github">
   <diagram name="Page-1" id="1f3Josyh72zQlKJe4HSX">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-1" value="Requirements:&amp;nbsp;&lt;br&gt;-Creating User Profile&lt;br&gt;-Take a pose assessment&lt;br&gt;-Save user data&lt;br&gt;-Send user pictures to ML folder&amp;nbsp;&lt;br&gt;- Pull data" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-2" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="320" y="190" width="45" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-8" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="303" y="30" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-10" value="User" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="140" height="150" as="geometry">
+            <mxRectangle x="40" y="200" width="70" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-11" value="Name" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="wXiqKeRXLXL9nZ6se_cO-10">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-12" value="Personal Data, email" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="wXiqKeRXLXL9nZ6se_cO-10">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-14" value="Balance Health" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="wXiqKeRXLXL9nZ6se_cO-10">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wXiqKeRXLXL9nZ6se_cO-13" value="Test Result" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="wXiqKeRXLXL9nZ6se_cO-10">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
