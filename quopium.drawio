@@ -1,9 +1,51 @@
-<mxfile host="app.diagrams.net" modified="2024-03-10T02:15:28.505Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" version="24.0.2" etag="7QX9Kc_vmlHNQGAhOk6d" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-10T02:23:04.805Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="J8XxKSVSooNYW_SEEM_f" version="24.0.2" type="github">
   <diagram name="Page-1" id="3lYDmKNsDnXVFXwoMM7O">
-    <mxGraphModel>
+    <mxGraphModel dx="1050" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-1" value="FastApi&lt;br&gt;User Authentification&lt;div&gt;(registration)&amp;nbsp;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-2" value="User Info&amp;nbsp;&lt;br&gt;DynamoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="570" y="60" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="XYi-7O2tZzJVUiUnrmQI-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="570" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-6" value="AWS" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.075;entryY=0.515;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="XYi-7O2tZzJVUiUnrmQI-1" target="XYi-7O2tZzJVUiUnrmQI-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="320" as="sourcePoint" />
+            <mxPoint x="470" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-8" value="Label" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="XYi-7O2tZzJVUiUnrmQI-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-9" value="AWS Lambda for CV" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="XYi-7O2tZzJVUiUnrmQI-7">
+          <mxGeometry x="-0.1054" y="-3" relative="1" as="geometry">
+            <mxPoint x="15" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-10" value="" style="shape=link;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="630" y="105" as="sourcePoint" />
+            <mxPoint x="770" y="105" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XYi-7O2tZzJVUiUnrmQI-11" value="File for ML" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="760" y="50" width="80" height="100" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
